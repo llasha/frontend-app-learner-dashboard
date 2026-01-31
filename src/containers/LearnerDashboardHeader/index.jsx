@@ -2,7 +2,6 @@ import React from 'react';
 
 import MasqueradeBar from 'containers/MasqueradeBar';
 import { AppContext } from '@edx/frontend-platform/react';
-import Header from '@edx/frontend-component-header';
 import { reduxHooks } from 'hooks';
 import urls from 'data/services/lms/urls';
 
@@ -11,6 +10,7 @@ import ConfirmEmailBanner from './ConfirmEmailBanner';
 import { useLearnerDashboardHeaderMenu, findCoursesNavClicked } from './hooks';
 
 import './index.scss';
+import HeaderSlot from '../../plugin-slots/HeaderSlot';
 
 export const LearnerDashboardHeader = () => {
   const { authenticatedUser } = React.useContext(AppContext);
@@ -29,7 +29,7 @@ export const LearnerDashboardHeader = () => {
   return (
     <>
       <ConfirmEmailBanner />
-      <Header
+      <HeaderSlot
         mainMenuItems={learnerHomeHeaderMenu.mainMenu}
         secondaryMenuItems={learnerHomeHeaderMenu.secondaryMenu}
         userMenuItems={learnerHomeHeaderMenu.userMenu}

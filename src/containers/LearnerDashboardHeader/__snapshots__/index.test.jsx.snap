@@ -3,7 +3,7 @@
 exports[`LearnerDashboardHeader render 1`] = `
 <Fragment>
   <ConfirmEmailBanner />
-  <Header
+  <HeaderSlot
     mainMenuItems={
       [
         {
